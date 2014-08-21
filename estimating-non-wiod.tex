@@ -2,6 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{authblk}
 \usepackage{attrib}
+\usepackage{subcaption} % for sugfigures (confusingly!)
+\usepackage{graphicx} % for \includegraphics
+\usepackage{rotating}
+\usepackage{cleveref}
 
 \title{Estimating input-output tables for countries not in the world input--output database}
 \author[*]{Thomas P. Ol\'{e}ron Evans}
@@ -20,6 +24,24 @@ Wow! There's some pretty good stuff in this paper.
 \end{abstract}
 
 \section{Analysis}
-To check the validity of the estimates, we will now compare the estimated values ``within sample''
+To check the validity of the estimates, we will now compare the estimated values ``within sample.''
+This means comparing the input-output tables of the countries which \textit{are} in WIOD with the estimates for those countries.
+\Cref{fig:density} is a great figure. It really shows some great stuff.
+
+\begin{sidewaysfigure}
+\centering
+\begin{subfigure}{0.49\linewidth}
+	\centering
+	\includegraphics[height=.95\textwidth]{images/est_v_data.png}
+	\caption{This one}
+	\label{fig:scatter}
+\end{subfigure}
+\begin{subfigure}{0.49\linewidth}
+	\centering
+	\includegraphics[height=.95\textwidth]{images/est_v_data_density.png}
+	\caption{The other one}
+	\label{fig:density}
+\end{subfigure}
+\end{sidewaysfigure}
 
 \end{document}
